@@ -9,7 +9,7 @@
          }
 -        return WebGLAny(script_state,
 -                        String(ContextGL()->GetString(GL_RENDERER)));
-+        return WebGLAny(script_state, String(""));
++        return ScriptValue::CreateNull(script_state->GetIsolate());
        }
        SynthesizeGLError(
            GL_INVALID_ENUM, "getParameter",
@@ -19,7 +19,7 @@
          }
 -        return WebGLAny(script_state,
 -                        String(ContextGL()->GetString(GL_VENDOR)));
-+        return WebGLAny(script_state, String(""));
++        return ScriptValue::CreateNull(script_state->GetIsolate());
        }
        SynthesizeGLError(
            GL_INVALID_ENUM, "getParameter",
